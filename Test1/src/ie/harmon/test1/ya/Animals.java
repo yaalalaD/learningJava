@@ -44,6 +44,10 @@ class Animals {
 		 return ownerPhone;
 	 }
 	 
+	 private int getYearOfBirth(Date dateOfBirth) {
+		 int year = dateOfBirth.getYear();
+		 return year;
+	 }
 	 
 	 public void setOwner(String name) {
 		 this.name = name;
@@ -77,7 +81,7 @@ class Animals {
 		 vaccineDate = new Date(dd, mm, yy);
 	 }
 	 
-	 public int calcAge(int yearOfBirth) {
+	 public int calcAge() {
 		 int age=2017-yearOfBirth;
 		 return age;
 	 }
