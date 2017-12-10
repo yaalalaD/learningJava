@@ -6,8 +6,7 @@ public class Flight {
 	private int flightNum;
 	private String flightCode;
 	private int seats = 150;
-	private int carryOns = seats;
-	//private int seatPrice;
+	private int carryOnsAvailable = seats * 2;
 	
 	
 	public Flight() { }
@@ -27,7 +26,23 @@ public class Flight {
 	}
 		
 	public boolean seatAvailable (int howMany) {
-		return seats > howMany ? true : false;
+		return seats >= howMany ? true : false;
+	}
+	
+	private void handleNoSeat () {
+		System.out.println("Sorry, No seats available on this flight");
+	}
+	
+	public void addPassanger(String name, int carryOns, int checkedIns) {
+		if (seatAvailable(1)) {
+		Passenger pass = new Passenger(name, carryOns, checkedIns);
+		seats = seats-1;
+		carryOnsAvailable = carryOnsAvailable - pass.getCarryOns();
+		}
+		else {
+			handleNoSeat();
+		}	
+		
 	}
 	
 	

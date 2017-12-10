@@ -22,6 +22,19 @@ public class Passenger {
 		this.checkedIns = checkedIns;
 	}
 	
+	public int getCarryOns() {
+		return carryOns;
+	}
+	
+	public int getcheckedIns() {
+		return checkedIns;
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	
 	
 	
 }
