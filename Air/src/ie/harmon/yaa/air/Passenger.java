@@ -6,7 +6,10 @@ public class Passenger {
 	private int carryOns;
 	private int checkedIns; 
 	
-	public Passenger() {}
+	public Passenger() {
+		carryOns = 1;
+		checkedIns = 0;
+	}
 	
 	public Passenger(String name) {
 		this.name = name;
