@@ -5,14 +5,21 @@ public class KidPassenger extends Passenger {
 	
 
 	public KidPassenger () {
+		super();
 		
 	}
 	
 	public KidPassenger (int age) {
 		this.age = age;
+		if (this.age >=5) {
+			carryOns = 1;
+			checkedIns = 0;
+		}
 	}
 	
-	
+	public int getAge() {
+		return age;
+	}
 	
 }
 	

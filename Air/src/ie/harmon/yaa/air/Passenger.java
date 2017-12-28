@@ -2,13 +2,13 @@ package ie.harmon.yaa.air;
 
 public class Passenger {
 
-	private String name;
-	private int carryOns;
-	private int checkedIns; 
+	protected String name;
+	protected int carryOns;
+	protected int checkedIns; 
 	
 	public Passenger() {
 		carryOns = 1;
-		checkedIns = 0;
+		checkedIns = 1;
 	}
 	
 	public Passenger(String name) {
